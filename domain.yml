@@ -1,0 +1,52 @@
+version: "2.0"
+
+intents:
+  - greet
+  - get_name
+  - get_number
+  - get_email
+  - get_dob
+  - get_address
+  - get_details
+  - bye
+
+entities:
+  - name
+  - number
+  - email
+  - dob
+  - address
+
+slots:
+  name:
+    type: text
+  number:
+    type: text
+  email:
+    type: text
+  dob:
+    type: text
+  address:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey!Please enter your name"
+  utter_number:
+  - text: "Hi {name},Please enter you Mobile Number"
+  utter_email:
+  - text: "Please enter your email"
+  utter_dob:
+  - text: "Please enter you DoB"
+  utter_address:
+  - text: "Please enter your address"
+  utter_great:
+  - text: "Thanks for providing your details, we will reach out to you at {number}"
+  utter_inform:
+  - text: "Your details are {name}, {number}, {email}, {dob}, {address}"
+  utter_bye:
+  - text: "Thanks for visiting :) | GoodBye!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

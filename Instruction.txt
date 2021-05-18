@@ -1,0 +1,8 @@
+For launching bot on browser:
+-Run the command after activating rasa environment - 'rasa run -m models --enable-api --cors "*"'
+-After setting the rasa server up
+  - Laucnch the home.html page to interact with bot on browser
+ ******************OR*****************
+
+-Run the bot on cmd prompt using 'rasa train && rasa shell'
+
